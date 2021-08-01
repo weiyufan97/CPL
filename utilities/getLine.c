@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "header.h"
 
-int getline(char a[], int lim) {
+int getLine(char a[], int lim) {
     char c;
     int i = 0;
     while (i < lim && (c = getchar()) != EOF && c != '\n') {

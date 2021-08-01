@@ -1,6 +1,6 @@
 #ifndef header_HPP
 #define header_HPP
 
-int getline(char a[], int lim);
+int getLine(char a[], int lim);
 
 #endif
