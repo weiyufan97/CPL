@@ -14,7 +14,7 @@
 				"-I",
 				"${workspaceFolder}/utilities",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${workspaceFolder}/bin/${fileBasenameNoExtension}"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
