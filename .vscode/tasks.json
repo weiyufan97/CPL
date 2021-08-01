@@ -9,12 +9,12 @@
 				"-g",
 				"${file}",
 				"-L",
-				"${workspaceFolder}/utilities",
+				"${workspaceFolder}/lib",
 				"-lutilities",
 				"-I",
-				"${workspaceFolder}/utilities",
+				"${workspaceFolder}/include",
 				"-o",
-				"${workspaceFolder}/bin/${fileBasenameNoExtension}"
+				"${workspaceFolder}/bin/cpl"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

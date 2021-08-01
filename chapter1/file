@@ -1,9 +1,0 @@
-// this is a quick c program to
-#incluse <stdio.h> // header file
-
-// main function
-int main() {
-    printf("HelloWorld\n"); // call the library function
-
-    return 0; // return value
-}

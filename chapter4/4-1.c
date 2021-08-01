@@ -1,32 +1,23 @@
 #include <stdio.h>
+#include "utilities.h"
 
 #define MAXLENGTH 100
 
-int getline(char line[], int lim);
 int strrindex(char s[], char t[]);
 
-char pattern[] = "ould";
+char pattern[] = "Hello";
 
 int main() {
     char line[MAXLENGTH];
     int count;
     int idx;
 
-    while ((count = getline(line, MAXLENGTH)) != 0) {
+    while ((count = getLine(line, MAXLENGTH)) != 0) {
         if ((idx = strrindex(line, pattern)) != -1)
-            printf("%s %d\n", line, idx);
+            printf("%d: %s", idx, line);
     }
 
     return 0;
-}
-
-int getline(char line[], int lim) {
-    char ch;
-    int i = 0;
-
-    while ((ch = getchar()) != EOF && ch != '\n' && i < lim)
-        line[i++] = ch;
-    return i;
 }
 
 int strrindex(char s[], char t[]) {

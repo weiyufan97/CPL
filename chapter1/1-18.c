@@ -1,16 +1,16 @@
 #include <stdio.h>
+#include "utilities.h"
 
 #define MAXLENGTH 100
 
 char* trimLeftTrailingSpaces(char a[]);
 char* trimRightTrailingSpaces(char a[]);
-int getline(char a[], int lim);
 
 int main() {
     char line[MAXLENGTH];
     int count = 0;
 
-    while ((count = getline(line, MAXLENGTH)) > 0) {
+    while ((count = getLine(line, MAXLENGTH)) > 0) {
         if (line[0] != '\n') {
             trimLeftTrailingSpaces(line);
             trimRightTrailingSpaces(line);
