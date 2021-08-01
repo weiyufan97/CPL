@@ -1,0 +1,18 @@
+!<arch>
+getline.c/      1627833016  0     0     100666  299       `
+#include <stdio.h>
+
+int getline(char a[], int lim) {
+    char c;
+    int i = 0;
+    while (i < lim && (c = getchar()) != EOF && c != '\n') {
+        a[i++] = c;
+    }
+    if (c == '\n') {
+        a[i++] = c;
+        a[i] = '\0';
+    } else {
+        a[i] = '\0';
+    }
+    return i;
+}
