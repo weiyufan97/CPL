@@ -1,15 +1,4 @@
-/* atof: string to double handling the scientific notation */
-#include <stdio.h>
-#include <ctype.h>
-
-double atof(const char* a);
-
-int main() {
-    const char* str = "78912.345e-6";
-
-    printf("%.12f\n", atof(str));
-    return 0;
-}
+/* exercise 4.2 */
 
 double atof(const char* a) {
     // skip the white spaces
@@ -68,4 +57,3 @@ double atof(const char* a) {
     
     return res;
 }
-

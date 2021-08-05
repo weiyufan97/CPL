@@ -1,0 +1,1 @@
+ar rcs lib/libutilities.a include/*.c
