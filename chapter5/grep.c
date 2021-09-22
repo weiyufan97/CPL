@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include "header.h"
 
 #define MAXLENGTH 100
 

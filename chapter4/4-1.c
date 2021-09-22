@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "utilities.h"
 
 #define MAXLENGTH 100
 
+int getline(char a[], int lim);
 int strrindex(char s[], char t[]);
 
 char pattern[] = "Hello";
@@ -12,10 +12,9 @@ int main() {
     int count;
     int idx;
 
-    while ((count = getLine(line, MAXLENGTH)) != 0) {
+    while ((count = getline(line, MAXLENGTH)) != 0)
         if ((idx = strrindex(line, pattern)) != -1)
             printf("%d: %s", idx, line);
-    }
 
     return 0;
 }
@@ -32,4 +31,18 @@ int strrindex(char s[], char t[]) {
     }
 
     return r;
+}
+
+int getline(char a[], int lim) {
+    // lim is the number of all characters, including '\0'
+    char c;
+    int i = 0;
+    while (--lim > 0 && (c = getchar()) != EOF && c != '\n')
+        a[i++] = c;
+
+    if (c == '\n')
+        a[i++] = c;
+    a[i] = '\0';
+
+    return i;
 }
